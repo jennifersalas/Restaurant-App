@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-app",
+  "version": "1.0.0",
+  "description": "---\r #### _Three Stage Course Material Project - Restaurant Reviews_",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennifersalas/Restaurant-App.git"
+  },
+  "author": "Jennifer Salas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jennifersalas/Restaurant-App/issues"
+  },
+  "homepage": "https://github.com/jennifersalas/Restaurant-App#readme"
+}
