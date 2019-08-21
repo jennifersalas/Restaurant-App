@@ -55,29 +55,29 @@
 
 	li {
 		background-color: #fff;
-		// border: 2px solid #ccc;
 		border-radius: 15px;
 		font-family: 'Roboto', Arial,sans-serif;
 		margin: 10px;
-		min-height: 380px;
+		// min-height: 380px;
 		text-align: left;
 		width: 270px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
 
 		div {
 			margin: 25px;
+			flex-grow: 1;
 		}
 
 		p {
 			padding: 0px 15px;
 			width: calc(100% - 30px);
 			text-align: left;
+
 		}
 
-		h1 {
+		h3 {
 			color: #f18200;
 			font-family: 'Roboto', Arial,sans-serif;
 			font-size: 14pt;
@@ -99,7 +99,7 @@
 			text-align: center;
 			text-decoration: none;
 			text-transform: uppercase;
-			width: 100px;
+			width: 150px;
 		}
 		a:focus {
 			outline: 0;

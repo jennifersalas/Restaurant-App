@@ -59,6 +59,9 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
 
+  const title = document.querySelector('title');
+  title.innerHTML = `${restaurant.name} - Restaurant Info`;
+
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 
@@ -111,7 +114,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     return;
   }
   const ul = document.getElementById('reviews-list');
-  reviews.innerHTML = "";
+  ul.innerHTML = "";
   reviews.forEach(review => {
     ul.appendChild(createReviewHTML(review));
   });
@@ -124,7 +127,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
-  name.innerHTML = review.name;
+  name.innerHTML = `<h3>${review.name}</h3>`;
   li.appendChild(name);
 
   const date = document.createElement('p');

@@ -1,3 +1,3 @@
 document.addEventListener('fetch', function (event) {
-  console.log(event.request);
+  console.log('test waiting', event.req);
 });

@@ -107,3 +107,12 @@ nav {
 	outline: 0;
 	box-shadow: 0 0 3pt 2pt #5E9ED6;
 }
+
+.hidden {
+	position:absolute;
+	left:-10000;
+	top: auto;
+	width:1px;
+	height: 1px;
+	overflow: hidden;
+}
