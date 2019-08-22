@@ -1,0 +1,11 @@
+@charset "utf-8"; /* CSS Document */
+
+
+@media screen and (min-width: 1500px) {
+  #maincontent {
+    width: 750px;
+  }
+  #map-container {
+    width: calc(100% - 750px);
+  }
+}
