@@ -1,21 +1,21 @@
 let cacheName = `restaurant-app-jen823-v2`;
 let oldCacheName = 'restaurant-app-jen823-v1'
-let domain = (url) => url.split('/')[2];
+const hostfolder = 'Restaurant-App'
 
 self.addEventListener('install', event => {
   // Preload the styling, main pages, and main functionality
   let cacheURLS = [
-    '/',
-    '/index.html',
-    'restaurant.html',
-    'js/dbhelper.js',
-    'js/main.js',
-    'js/restaurant_info.js',
-    '/controller.js',
+    '/${hostfolder}/',
+    '/${hostfolder}/index.html',
+    '/${hostfolder}/restaurant.html',
+    '/${hostfolder}/js/dbhelper.js',
+    '/${hostfolder}/js/main.js',
+    '/${hostfolder}/js/restaurant_info.js',
+    '/${hostfolder}/controller.js',
     'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
     'https://fonts.googleapis.com/css?family=Roboto|Lobster&display=swap',
-    'css/styles.css',
-    'css/restaurant_details.css',
+    '/${hostfolder}/css/styles.css',
+    '/${hostfolder}/css/restaurant_details.css',
     'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
   ];
   event.waitUntil(
@@ -31,8 +31,8 @@ self.addEventListener('fetch', event => {
 
   var requestURL = new URL(event.request.url);
 
-  if (requestURL.pathname == '/') event.respondWith(caches.match('/'));
-  else if (requestURL.pathname == '/restaurant.html') event.respondWith(caches.match('/restaurant.html'))
+  if (requestURL.pathname == '/${hostfolder}/') event.respondWith(caches.match('/'));
+  else if (requestURL.pathname == '/${hostfolder}/restaurant.html') event.respondWith(caches.match('/${hostfolder}/restaurant.html'))
   else if (requestURL.pathname.includes('browser-sync')); // do not cache anything with browser sync
   else if (requestURL.hostname == self.location.hostname){ // cache anything on our this site
     event.respondWith(
