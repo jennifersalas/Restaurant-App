@@ -4,12 +4,14 @@ const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 const concat = require("gulp-concat")
 
-gulp.task("default", ["styles", "copy-scripts", 'copy-html', 'copy-img'], function() {
+gulp.task("default",
+  ["styles", "copy-scripts", 'copy-html', 'copy-img', 'copy-serviceWorker'],
+  function() {
   gulp.watch("./app/sass/**/*.scss", ["styles"]);
   gulp.watch("./app/js/**/*.js", ["copy-scripts"]);
   gulp.watch("./app/**/*.html", ["copy-html"]);
   gulp.watch("./app/img/*", ["copy-img"]);
-
+  gulp.watch("./app/*.js", ['copy-serviceWorker']);
   console.log('now watching');
 
   browserSync.init({
@@ -45,4 +47,10 @@ gulp.task('copy-scripts', function () {
   gulp
     .src('./app/js/*.js')
     .pipe(gulp.dest('./dist/js'));;
+})
+
+gulp.task('copy-serviceWorker', function () {
+  gulp
+    .src('./app/*.js')
+    .pipe(gulp.dest('./dist/'));;
 })

@@ -116,3 +116,35 @@ nav {
 	height: 1px;
 	overflow: hidden;
 }
+
+.update-alert {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: calc(100% - 50px);
+	background: #ea4335;
+	padding: 25px;
+	text-align: right;
+	z-index: 1;
+
+	p {
+		margin: 5px;
+		color: #fff;
+		display: inline-block;
+		font-weight: bold;
+	}
+
+	button {
+		padding: 10px;
+		background: #fff;
+		color: #ea4335;
+		border: 0px;
+		border-radius: 10px;
+		margin: 5px;
+		font-weight: bold;
+	}
+	button:active {
+		background-color: #d2d2d2;
+	}
+
+}
