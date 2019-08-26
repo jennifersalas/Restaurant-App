@@ -168,16 +168,3 @@ class DBHelper {
   }
 
 }
-
-function initServiceWorker() {
-  if(!navigator.serviceWorker) return;
-
-  navigator.serviceWorker.register('./js/sw.js')
-    .then(_ => console.log('service worker registered!'))
-    .catch(error => {
-      console.log("service worker failed to register");
-      console.log(error);
-    });
-}
-
-initServiceWorker();

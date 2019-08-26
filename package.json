@@ -4,13 +4,18 @@
   "description": "---\r #### _Three Stage Course Material Project - Restaurant Reviews_",
   "main": "index.js",
   "dependencies": {
+    "babel": "^6.23.0",
     "browser-sync": "^2.26.7",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "gulp-babel": "^8.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
