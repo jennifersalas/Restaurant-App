@@ -31,7 +31,7 @@ function initServiceWorker() {
     });
   };
 
-  navigator.serviceWorker.register(`/sw.js`, {scope: `/`})
+  navigator.serviceWorker.register(`${path}/sw.js`, {scope: `${path}/`})
     .then( reg => {
       if(!navigator.serviceWorker.controller) return;
       if (reg.waiting) notify(reg.waiting);
