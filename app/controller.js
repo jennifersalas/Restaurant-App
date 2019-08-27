@@ -43,6 +43,7 @@ function initServiceWorker() {
     })
     .catch(error => {
       console.log("service worker failed to register");
+      console.log(`${path}/sw.js`)
       console.log(window.location.pathname);
       console.log(error);
     });
