@@ -1,5 +1,6 @@
 let hostname = "localhost",
   path = "",
-  port = ":3000";
+  port = ":3000",
+  protocol = "http";
 
-console.log(hostname, path, port);
+console.log(protocol, hostname, path, port)

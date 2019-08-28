@@ -1,5 +1,6 @@
 let hostname = "jennifersalas.github.io",
-  path = "Restaurant-App",
-  port = "";
+  path = "/Restaurant-App",
+  port = "",
+  protocol = "https";
 
-console.log(hostname, path, port);
+console.log(protocol, hostname, path, port)
