@@ -16,7 +16,7 @@ Alternatively, visit <a href="https://jennifersalas.github.io/Restaurant-App/">h
 
 ## Dependencies
 
-- npm
-- gulp
+- Node.js 10.16.2
+- Gulp 3.9.1
 
 Run `npm install` in the project folder to install dependencies.
