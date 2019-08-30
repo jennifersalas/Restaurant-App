@@ -72,7 +72,7 @@ gulp.task(`copy-data`, function () {
     .pipe(gulp.dest(`./dev/data/`));
 });
 
-gulp.task(`dev-build`, function () {
+gulp.task(`build`, function () {
   gulp
     .src("./app/sass/**/*.scss")
     .pipe(sass({
@@ -95,7 +95,7 @@ gulp.task(`dev-build`, function () {
     gulp
       .src(`./app/js/*.js`)
       .pipe(replace('${path}', '/Restaurant-App'))
-      .pipe(replace('${hostname}', 'https://jennifersalas.github.io'))
+      .pipe(replace('${hostname}', 'jennifersalas.github.io'))
       .pipe(replace('${port}', ''))
       .pipe(replace('${protocol}', 'https'))
       .pipe(gulp.dest(`./docs/js`));
@@ -103,7 +103,7 @@ gulp.task(`dev-build`, function () {
     gulp
       .src(`./app/*.js`)
       .pipe(replace('${path}', '/Restaurant-App'))
-      .pipe(replace('${hostname}', 'https://jennifersalas.github.io'))
+      .pipe(replace('${hostname}', 'jennifersalas.github.io'))
       .pipe(replace('${port}', ''))
       .pipe(replace('${protocol}', 'https'))
       .pipe(gulp.dest(`./docs/`));
