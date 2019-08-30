@@ -18,6 +18,7 @@ function initServiceWorker() {
     refresh.addEventListener(`click`, _ => {
       console.log(worker);
       worker.postMessage({action: `skipWaiting`});
+      location.reload();
     })
 
     alert.append(notice, refresh, cancel);

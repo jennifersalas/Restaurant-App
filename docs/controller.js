@@ -18,6 +18,7 @@ function initServiceWorker() {
     refresh.addEventListener(`click`, _ => {
       console.log(worker);
       worker.postMessage({action: `skipWaiting`});
+      location.reload();
     })
 
     alert.append(notice, refresh, cancel);
@@ -31,7 +32,7 @@ function initServiceWorker() {
     });
   };
 
-  navigator.serviceWorker.register(`${path}/sw.js`, {scope: `${path}/`})
+  navigator.serviceWorker.register(`/Restaurant-App/sw.js`, {scope: `/Restaurant-App/`})
     .then( reg => {
       if(!navigator.serviceWorker.controller) return;
       if (reg.waiting) notify(reg.waiting);
@@ -43,7 +44,7 @@ function initServiceWorker() {
     })
     .catch(error => {
       console.log("service worker failed to register");
-      console.log(`${path}/sw.js`)
+      console.log(`/Restaurant-App/sw.js`)
       console.log(window.location.pathname);
       console.log(error);
     });

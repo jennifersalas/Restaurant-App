@@ -9,7 +9,7 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     // const port = `3000` // Change this to your server port
-    return `http://${hostname}${port}${path}/data/restaurants.json`;
+    return `https://https://jennifersalas.github.io/Restaurant-App/data/restaurants.json`;
   }
 
   /**
@@ -28,6 +28,7 @@ class DBHelper {
         callback(error, null);
       }
     };
+    console.log(xhr, DBHelper.DATABASE_URL);
     xhr.send();
   }
 

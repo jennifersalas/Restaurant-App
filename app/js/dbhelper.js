@@ -28,6 +28,7 @@ class DBHelper {
         callback(error, null);
       }
     };
+    console.log(xhr, DBHelper.DATABASE_URL);
     xhr.send();
   }
 
