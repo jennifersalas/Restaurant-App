@@ -12,7 +12,7 @@ August 30, 2019
 
 To run, run `gulp` in the project folder and visit  <a href="http://localhost:3000/">`http://localhost:3000/`</a>
 
-Alternatively, visit <a href="https://jennifersalas.github.io/Restaurant-App/">https://jennifersalas.github.io/Restaurant-App/</a> to run the deployed version.
+Alternatively, visit <a href="https://restaurant.jsnode.me/">https://restaurant.jsnode.me/</a> to run the deployed version.
 
 ## Dependencies
 
